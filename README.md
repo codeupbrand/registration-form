@@ -1,4 +1,4 @@
-# registration-form
+# Registration-form
 # Telegram Form Submission
 
 ![Screenshot 2024-08-09 044033](https://github.com/user-attachments/assets/52c93089-2752-413b-b5ce-5ded4284577b)
