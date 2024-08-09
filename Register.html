@@ -1,0 +1,142 @@
+<html><head><base href=""><style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #1e2329;
+        color: #ffffff;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        display: flex;
+        background-color: #282c34;
+        border-radius: 10px;
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0,0,0,0.2);
+    }
+    .left-panel {
+        background-color: #2c3e50;
+        padding: 40px;
+        width: 300px;
+    }
+    .right-panel {
+        padding: 40px;
+        width: 400px;
+    }
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+    .form-group {
+        margin-bottom: 20px;
+    }
+    label {
+        display: block;
+        margin-bottom: 5px;
+        font-size: 14px;
+        color: #a0a0a0;
+    }
+    input[type="text"],
+    input[type="email"],
+    input[type="password"] {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #3a3f48;
+        border-radius: 5px;
+        background-color: #1e2329;
+        color: #ffffff;
+        font-size: 16px;
+    }
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+        outline: none;
+        border-color: #1db954;
+    }
+    .register-btn {
+        width: 100%;
+        padding: 12px;
+        background-color: #1db954;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+    .register-btn:hover {
+        background-color: #1ed760;
+    }
+    .login-link {
+        text-align: right;
+        margin-top: 20px;
+    }
+    .login-link a {
+        color: #1db954;
+        text-decoration: none;
+    }
+    .login-link a:hover {
+        text-decoration: underline;
+    }
+    .illustration {
+        margin-top: 30px;
+        text-align: center;
+    }
+    .illustration svg {
+        width: 200px;
+        height: auto;
+    }
+</style></head><body>
+<div class="container">
+    <div class="left-panel">
+        <h1>Create a new account, fast and easy.</h1>
+        <p>Get started in few steps. We need some information to set up your account.</p>
+        <div class="illustration">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                <rect x="10" y="10" width="80" height="60" fill="#3a3f48" rx="5"/>
+                <circle cx="30" cy="30" r="10" fill="#1db954"/>
+                <rect x="50" y="25" width="30" height="5" fill="#a0a0a0"/>
+                <rect x="50" y="35" width="30" height="5" fill="#a0a0a0"/>
+                <rect x="20" y="50" width="60" height="5" fill="#a0a0a0"/>
+                <rect x="20" y="60" width="60" height="5" fill="#a0a0a0"/>
+            </svg>
+        </div>
+    </div>
+    <div class="right-panel">
+        <form action="process_form.php" method="POST">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+            </div>
+            <button type="submit" class="register-btn">Register</button>
+        </form>
+        <div class="login-link">
+            <a href="google.com">Already have an account? Login</a>
+        </div>
+    </div>
+</div>
+
+<script>
+document.getElementById('register-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+    // Here you would typically send the form data to your server
+    console.log('Form submitted');
+    alert('Account created successfully!');
+});
+</script>
+</body></html>
